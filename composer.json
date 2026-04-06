@@ -1,0 +1,13 @@
+{
+    "name": "smarbo/smarbo-plus-event",
+    "description": "Event Management System",
+    "type": "project",
+    "require": {
+        "tecnickcom/tcpdf": "^6.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "SmarboPlusEvent\\": "src/"
+        }
+    }
+}

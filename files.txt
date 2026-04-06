@@ -1,0 +1,61 @@
+SmarboPlusevent/
+│
+├── index.php
+├── login.php
+├── register.php
+├── unauthorized.php
+│
+├── includes/
+│   ├── config.php
+│   ├── auth.php
+│   └── functions.php
+│
+├── admin/
+│   ├── dashboard.php
+│   ├── events.php
+│   ├── users.php
+│   ├── reports.php
+│   ├── settings.php
+│   └── create-event.php
+│
+├── owner/
+│   ├── dashboard.php
+│   ├── contributions.php
+│   ├── invitations.php
+│   ├── attendance.php
+│   └── my-events.php
+│
+├── api/
+│   ├── login.php
+│   ├── register.php
+│   ├── logout.php
+│   ├── events.php
+│   ├── contributions.php
+│   ├── invitations.php
+│   ├── attendance.php
+│   └── stats.php
+│
+├── libs/
+│   └── tcpdf/
+│       ├── tcpdf.php
+│       ├── fonts/
+│       └── ... (TCPDF files)
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   ├── main.js
+│   │   ├── admin.js
+│   │   └── owner.js
+│   └── images/
+│
+└── database/
+    └── SmarboPlus_event_db.sql
+
+===============
+mkdir for posts
+==============
+
+mkdir -p assets/uploads/posts
+chmod 777 assets/uploads/posts

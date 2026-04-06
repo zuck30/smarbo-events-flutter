@@ -1,0 +1,5 @@
+/vendor/
+/composer.lock
+php_server.log
+.DS_Store
+.htaccess
