@@ -187,4 +187,40 @@ class SupabaseEventRepository implements EventRepository {
       });
     }
   }
+
+  @override
+  Future<void> toggleLike(String postId) async {
+    final userId = _supabase.auth.currentUser!.id;
+    final existing = await _supabase
+        .from('event_post_likes')
+        .select()
+        .eq('post_id', postId)
+        .eq('user_id', userId)
+        .maybeSingle();
+
+    if (existing != null) {
+      await _supabase.from('event_post_likes').delete().eq('id', existing['id']);
+    } else {
+      await _supabase.from('event_post_likes').insert({'post_id': postId, 'user_id': userId});
+    }
+  }
+
+  @override
+  Future<void> addComment(String postId, String comment) async {
+    await _supabase.from('event_post_comments').insert({
+      'post_id': postId,
+      'user_id': _supabase.auth.currentUser!.id,
+      'comment': comment,
+    });
+  }
+
+  @override
+  Future<List<Map<String, dynamic>>> getComments(String postId) async {
+    final response = await _supabase
+        .from('event_post_comments')
+        .select('*, profiles(full_name, avatar_url)')
+        .eq('post_id', postId)
+        .order('created_at', ascending: true);
+    return List<Map<String, dynamic>>.from(response);
+  }
 }

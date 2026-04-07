@@ -29,4 +29,21 @@ class AppConstants {
   static const String statusPending = 'pending';
   static const String statusApproved = 'approved';
   static const String statusDisapproved = 'disapproved';
+
+  // UI Strings
+  static const String loginTitle = 'Login to manage your events';
+  static const String registerTitle = 'Create Account';
+  static const String dashboardTitle = 'System Overview';
+  static const String ownerDashboardTitle = 'Welcome Back!';
+  static const String manageUsers = 'Manage Users';
+  static const String manageEvents = 'Manage Events';
+  static const String settings = 'Account Settings';
+  static const String logout = 'Logout';
+  static const String delete = 'Delete';
+  static const String cancel = 'Cancel';
+  static const String create = 'Create';
+  static const String add = 'Add';
+  static const String update = 'Update';
+  static const String save = 'Save';
+  static const String downloadReport = 'Download Report';
 }

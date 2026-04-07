@@ -30,4 +30,9 @@ abstract class EventRepository {
   // Attendance
   Future<List<Attendance>> getAttendance(String eventId);
   Future<void> recordAttendance(String eventId, String guestName, String status);
+
+  // Likes & Comments
+  Future<void> toggleLike(String postId);
+  Future<void> addComment(String postId, String comment);
+  Future<List<Map<String, dynamic>>> getComments(String postId);
 }

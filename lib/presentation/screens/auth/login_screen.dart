@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:smarbo_events/core/constants/app_constants.dart';
 import 'package:smarbo_events/core/theme/app_theme.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -69,13 +70,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       const Icon(Icons.event_note, size: 80, color: AppTheme.primaryColor),
                       const SizedBox(height: 32),
                       const Text(
-                        'SmarboPlusEvent',
+                        AppConstants.appName,
                         style: TextStyle(fontSize: 32, fontWeight: FontWeight.w900, color: Colors.white),
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        'Login to manage your events',
+                        AppConstants.loginTitle,
                         style: TextStyle(fontSize: 16, color: Colors.grey[400]),
                         textAlign: TextAlign.center,
                       ),
