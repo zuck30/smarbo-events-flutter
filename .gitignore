@@ -1,5 +1,16 @@
-/vendor/
-/composer.lock
-php_server.log
+# Flutter/Dart build artifacts
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+
+# PHP/Legacy artifacts (already removed but for future)
+vendor/
+.env
+
+# OS-specific files
 .DS_Store
-.htaccess
+Thumbs.db
